@@ -11,6 +11,7 @@ Measurement and comparison of several slices aligning methods and data integrati
 
 
 **Methods:**
+
 PASTE: https://github.com/raphael-group/paste
 
 PASTE2: https://github.com/raphael-group/paste2
