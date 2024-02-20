@@ -1,7 +1,7 @@
 import STAligner
 import scipy.linalg
 import matplotlib.patches as mpatches
-from ..utils import *
+from codes_github.utils import *
 
 import torch
 

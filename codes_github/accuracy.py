@@ -2,8 +2,8 @@ from utils import *
 import seaborn as sns
 import paste as pst
 
-from src.paste2.helper import *
-from src.paste2.projection import *
+from paste2.helper import *
+from paste2.projection import *
 
 
 slice_map = {0:'A',1:'B',2:'C',3:'D'}

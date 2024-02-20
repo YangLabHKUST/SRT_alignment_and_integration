@@ -1,7 +1,7 @@
 import matplotlib.patches as mpatches
 import paste as pst
 import time
-from ..utils import *
+from codes_github.utils import *
 
 
 # load data

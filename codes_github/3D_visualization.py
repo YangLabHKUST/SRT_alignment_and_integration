@@ -1,10 +1,10 @@
 import seaborn as sns
 import STAligner
-from src.paste2.model_selection import *
-from src.paste2.helper import *
+from paste2.model_selection import *
+from paste2.helper import *
 import paste as pst
 from utils import ICP_align
-from src.paste2.projection import partial_stack_slices_pairwise
+from paste2.projection import partial_stack_slices_pairwise
 
 import warnings
 warnings.filterwarnings("ignore")

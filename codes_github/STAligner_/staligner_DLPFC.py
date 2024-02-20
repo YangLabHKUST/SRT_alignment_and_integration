@@ -2,7 +2,7 @@ import STAligner
 import scipy.linalg
 import matplotlib.patches as mpatches
 import torch
-from ..utils import *
+from codes_github.utils import *
 
 import warnings
 warnings.filterwarnings("ignore")

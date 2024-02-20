@@ -2,8 +2,8 @@ from sklearn.mixture import GaussianMixture
 import seaborn as sns
 import matplotlib.patches as mpatches
 import sklearn
-from src.paste2.model_selection import *
-from src.paste2.helper import *
+from paste2.model_selection import *
+from paste2.helper import *
 from utils import match_cluster_labels
 import warnings
 warnings.filterwarnings("ignore")
@@ -39,6 +39,7 @@ sample_groups = [["151507", "151508", "151509","151510"], [ "151669", "151670","
 layer_groups = [[adatas[sample_groups[j][i]] for i in range(len(sample_groups[j]))] for j in range(len(sample_groups))]
 layer_to_color_map = {'Layer{0}'.format(i+1):sns.color_palette()[i] for i in range(6)}
 layer_to_color_map['WM'] = sns.color_palette()[6]
+print(layer_to_color_map)
 
 
 # raw cluster

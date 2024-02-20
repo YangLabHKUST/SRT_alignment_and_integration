@@ -1,5 +1,5 @@
 import matplotlib
-from ..utils import *
+from codes_github.utils import *
 import matplotlib.pyplot as plt
 import torch
 import STAligner

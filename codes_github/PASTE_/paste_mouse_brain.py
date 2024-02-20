@@ -1,7 +1,7 @@
 import paste as pst
 import time
 import matplotlib
-from ..utils import *
+from codes_github.utils import *
 
 
 fn1 = '../../data/mouse_brain/sample1'

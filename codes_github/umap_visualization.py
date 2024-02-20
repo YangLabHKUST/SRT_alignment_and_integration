@@ -2,8 +2,8 @@ import seaborn as sns
 import umap
 from sklearn import preprocessing
 from matplotlib.colors import ListedColormap
-from src.paste2.model_selection import *
-from src.paste2.helper import *
+from paste2.model_selection import *
+from paste2.helper import *
 
 import warnings
 warnings.filterwarnings("ignore")

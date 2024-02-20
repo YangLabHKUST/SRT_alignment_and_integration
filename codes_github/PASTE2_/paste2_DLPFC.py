@@ -1,11 +1,10 @@
 import matplotlib.patches as mpatches
 import time
-from ..src.paste2.PASTE2 import *
-from ..src.paste2.model_selection import *
-from ..src.paste2.projection import *
-from ..src.paste2.helper import *
-from ..utils import *
-
+from paste2.PASTE2 import *
+from paste2.model_selection import *
+from paste2.projection import *
+from paste2.helper import *
+from codes_github.utils import *
 
 sample_list = ["151507", "151508", "151509","151510", "151669", "151670","151671", "151672", "151673","151674", "151675", "151676"]
 adatas = {sample:sc.read_h5ad('../../data/DLPFC/{0}_preprocessed.h5'.format(sample)) for sample in sample_list}

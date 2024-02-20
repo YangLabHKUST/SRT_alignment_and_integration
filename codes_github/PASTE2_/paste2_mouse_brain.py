@@ -1,11 +1,11 @@
 import time
 import paste as pst
 import matplotlib
-from ..src.paste2.PASTE2 import *
-from ..src.paste2.model_selection import *
-from ..src.paste2.projection import *
-from ..src.paste2.helper import *
-from ..utils import *
+from paste2.PASTE2 import *
+from paste2.model_selection import *
+from paste2.projection import *
+from paste2.helper import *
+from codes_github.utils import *
 
 
 fn1 = '../../data/mouse_brain/sample1'
