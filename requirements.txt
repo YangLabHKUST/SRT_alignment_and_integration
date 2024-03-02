@@ -3,4 +3,3 @@ paste2=1.0.1
 gpsa=0.8
 STAligner=1.0.0 It was installed following the procedure provided on github
 stitch3d=1.0.3
-scib=1.1.4
