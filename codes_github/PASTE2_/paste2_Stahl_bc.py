@@ -1,11 +1,11 @@
 import matplotlib.patches as mpatches
 import time
 import paste as pst
-from ..src.paste2.PASTE2 import *
-from ..src.paste2.model_selection import *
-from ..src.paste2.projection import *
-from ..src.paste2.helper import *
-from ..utils import *
+from paste2.PASTE2 import *
+from paste2.model_selection import *
+from paste2.projection import *
+from paste2.helper import *
+from codes_github.utils import *
 
 
 # Load Slices
@@ -41,11 +41,11 @@ s3 = select_overlap_fraction(slice3, slice4)
 ss = [s1, s2, s3]
 print(ss)
 # pi0 = match_spots_using_spatial_heuristic(slice1.obsm['spatial'], slice2.obsm['spatial'])
-pi12 = partial_pairwise_align(slice1, slice2, s1)#, G_init=pi0)
+pi12 = partial_pairwise_align(slice1, slice2, min(s1, 0.99))#, G_init=pi0)
 # pi0 = match_spots_using_spatial_heuristic(slice2.obsm['spatial'], slice3.obsm['spatial'])
-pi23 = partial_pairwise_align(slice2, slice3, s2)#, G_init=pi0)
+pi23 = partial_pairwise_align(slice2, slice3, min(s2, 0.99))#, G_init=pi0)
 # pi0 = match_spots_using_spatial_heuristic(slice3.obsm['spatial'], slice4.obsm['spatial'])
-pi34 = partial_pairwise_align(slice3, slice4, s3)#, G_init=pi0)
+pi34 = partial_pairwise_align(slice3, slice4, min(s3, 0.99))#, G_init=pi0)
 print('Alignment Runtime: ' + str(time.time() - start))
 
 

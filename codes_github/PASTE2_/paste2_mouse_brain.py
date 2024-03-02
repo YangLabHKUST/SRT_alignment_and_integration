@@ -22,7 +22,7 @@ start = time.time()
 s = select_overlap_fraction(slice1, slice2)
 ss = [s]
 pi0 = match_spots_using_spatial_heuristic(slice1.obsm['spatial'],slice2.obsm['spatial'], use_ot=True)
-pi12 = partial_pairwise_align(slice1, slice2, s, G_init=pi0)
+pi12 = partial_pairwise_align(slice1, slice2, min(s, 0.99), G_init=pi0)
 print('Alignment Runtime: ' + str(time.time() - start))
 
 # To visualize the alignment you can stack the slices

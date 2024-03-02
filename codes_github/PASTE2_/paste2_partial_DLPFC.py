@@ -1,11 +1,10 @@
 import matplotlib.patches as mpatches
 import time
-from ..src.paste2.PASTE2 import *
-from ..src.paste2.model_selection import *
-from ..src.paste2.projection import *
-from ..src.paste2.helper import *
-from ..utils import *
-
+from paste2.PASTE2 import *
+from paste2.model_selection import *
+from paste2.projection import *
+from paste2.helper import *
+from codes_github.utils import *
 
 sample_list = ["151507", "151508", "151509","151510", "151669", "151670","151671", "151672", "151673","151674", "151675", "151676"]
 adatas = {sample:sc.read_h5ad('../../data/DLPFC/{0}_preprocessed.h5'.format(sample)) for sample in sample_list}
@@ -38,11 +37,11 @@ for sample_choose in range(len(sample_groups)):
     ss = [s1, s2, s3]
 
     pi0 = match_spots_using_spatial_heuristic(slice1.obsm['spatial'],slice2.obsm['spatial'], use_ot=True)
-    pi12 = partial_pairwise_align(slice1, slice2, s1, G_init=pi0)
+    pi12 = partial_pairwise_align(slice1, slice2, min(s1, 0.99), G_init=pi0)
     pi0 = match_spots_using_spatial_heuristic(slice2.obsm['spatial'], slice3.obsm['spatial'], use_ot=True)
-    pi23 = partial_pairwise_align(slice2, slice3, s2, G_init=pi0)
+    pi23 = partial_pairwise_align(slice2, slice3, min(s2, 0.99), G_init=pi0)
     pi0 = match_spots_using_spatial_heuristic(slice3.obsm['spatial'], slice4.obsm['spatial'], use_ot=True)
-    pi34 = partial_pairwise_align(slice3, slice4, s3, G_init=pi0)
+    pi34 = partial_pairwise_align(slice3, slice4, min(s3, 0.99), G_init=pi0)
     print('Alignment Runtime: ' + str(time.time() - start))
 
     # To visualize the alignment you can stack the slices
