@@ -24,4 +24,4 @@ GPSA: https://github.com/andrewcharlesjones/spatial-alignment
 
 STitch3D: https://github.com/YangLabHKUST/STitch3D
 
-The requirements of the environment can be found in requirements.txt.
+The version of methods tested can be found in requirements.txt.
